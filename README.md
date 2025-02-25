@@ -1,33 +1,67 @@
-# parsley.js
-validation de formulaire ynamique avec ajax
-Ce projet utilise **Parsley.js** comme outil dynamique pour la validation des formulaires. Parsley.js est une bibliothèque JavaScript qui facilite la validation des formulaires en fournissant des fonctionnalités robustes et faciles à utiliser.
+# Parsley
 
-Installation
+[![Build Status](https://travis-ci.org/guillaumepotier/Parsley.js.svg?branch=master)](https://travis-ci.org/guillaumepotier/Parsley.js)
 
-Pour utiliser Parsley.js dans votre projet, vous pouvez l'installer via npm ou inclure directement le fichier JavaScript dans votre projet.
+JavaScript form validation, without actually writing a single line of JavaScript!
 
- Via npm :
-npm install parsleyjs
-Via CDN :
-Vous pouvez également inclure Parsley.js directement depuis un CDN :
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>
+## Version
 
-Utilisation
-Pour activer la validation des formulaires avec Parsley.js, ajoutez simplement l'attribut data-parsley-validate à votre balise <form>. Voici un exemple :
+2.9.2
 
-<form id="myForm" data-parsley-validate>
-    <input type="text" name="username" required data-parsley-minlength="3" />
-    <input type="email" name="email" required />
-    <button type="submit">Soumettre</button>
-</form>
-Ensuite, initialisez Parsley.js dans votre script JavaScript :
+## Doc
 
-$(document).ready(function() {
-    $('#myForm').parsley();
-});
+See `index.html` and `doc/`
 
-Fonctionnalités
-Validation en temps réel des champs de formulaire.
-Messages d'erreur personnalisables.
-Support pour les validations personnalisées.
-Intégration facile avec jQuery.
+## Requirements
+
+[jQuery](https://jquery.com/) >= 1.8 (compatible with 2.x and 3.0)
+[es5-shim](https://github.com/es-shims/es5-shim) if you want need to support IE8
+
+## Questions?
+
+Please ask questions on [StackOverflow](https://stackoverflow.com/questions/ask) and be sure to include the `parsley.js` tag. Please **provide an example**, starting for example from [this jsfiddle](https://jsfiddle.net/marcandre/58vnaqur/)
+
+## Contributing
+
+See the [`CONTRIBUTING.md` file](https://github.com/guillaumepotier/Parsley.js/blob/master/CONTRIBUTING.md)
+
+## Integrations
+
+Create integration with other framework as a separate Github repo and send a pull request for including here.
+Some integrations are
+
+* [CakePHP](https://github.com/Codaxis/parsley-helper)
+* [Django](https://github.com/agiliq/django-parsley)
+* [Rails](https://github.com/mekishizufu/parsley-rails)
+* [OSSCDN by MaxCDN](https://osscdn.com/#/parsleyjs)
+* [Drupal](https://www.drupal.org/project/parsley)
+
+## Install dev environment and running tests
+
+First time: install `npm` and:
+```
+npm install -g gulp
+```
+
+then
+```
+npm install
+gulp test
+```
+
+## Build `dist/` and `doc/annotated-source`
+
+```
+gulp build
+```
+
+## Run tests
+
+In the browser: run a server with `gulp test-browser`, then open `test/runner.html`
+
+In the terminal: `gulp test`
+
+## License
+
+Released under the MIT License. See the bundled `LICENSE` file for
+details.
